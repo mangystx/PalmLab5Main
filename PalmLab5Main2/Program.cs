@@ -1,71 +1,31 @@
-﻿using PalmLab5;
+﻿using System;
+using System.IO;
 
-while (true)
+namespace PalmLab5
 {
-    Console.WriteLine("Введіть цифру відповідну номеру учня\n" +
-                      "1 Марченко А.І.\n2 Каюк І.В.\n" +
-                      "3 Мартиненко О.С.\n4 Шафієв Д.Ю.");
-    switch (Console.ReadLine())
+    public class NTR
     {
-        case "1":
-            Console.Write("Введіть номер блоку -> ");
-            switch (Console.ReadLine())
+        public void Ntr()
+        {
+            try
             {
-                case "1":
-                    break;
-                case "2":
-                    break;
-                default:
-                    Console.WriteLine("Некоректне значення");
-                    break;
+                string[] studs = File.ReadAllLines("input.txt");
+                foreach (string data in studs)
+                {
+                    Student student = new Student(data);
+
+                    if (student.scholarship == 0)
+                    {
+                        double averageMark = Convert.ToDouble((student.mathematicsMark + student.physicsMark + student.informaticsMark) / 3);
+
+                        Console.WriteLine($"{student.surName} {student.firstName} {student.patronymic} - середнiй бал: {averageMark}");
+                    }
+                }
             }
-            break;
-        case "2":
-            Console.Write("Введіть номер блоку -> ");
-            switch (Console.ReadLine())
+            catch (Exception e)
             {
-                case "1":
-                    break;
-                case "2":
-                    break;
-                default:
-                    Console.WriteLine("Некоректне значення");
-                    break;
+                Console.WriteLine("Error: " + e.Message);
             }
-            break;
-        case "3":
-            Console.Write("Введіть номер блоку -> ");
-            switch (Console.ReadLine())
-            {
-                case "1":
-                    break;
-                case "2":
-                    break;
-                default:
-                    Console.WriteLine("Некоректне значення");
-                    break;
-            }
-            break;
-        case "4":
-            Console.Write("Введіть номер блоку -> ");
-            switch (Console.ReadLine())
-            {
-                case "1":
-                    break;
-                case "2":
-                    break;
-                default:
-                    Console.WriteLine("Некоректне значення");
-                    break;
-            }
-            break;
-        default:
-            Console.WriteLine("Некоректне занчення");
-            break;
-    }
-    Console.WriteLine("Якщо бажаєте вийти введіть q");
-    if (string.Compare(Console.ReadLine(), "q", StringComparison.OrdinalIgnoreCase) == 0)
-    {
-        break;
+        }
     }
 }
