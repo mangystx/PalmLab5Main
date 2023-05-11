@@ -3,11 +3,11 @@ namespace PalmLab5;
 public class Andrey
 {
     #region FirstBlock
-static int TimeSinceMidnight(MyTimeAndrey t)
+public static int TimeSinceMidnight(MyTimeAndrey t)
 {
     return (t.Hour * 60 + t.Minute) * 60 + t.Second;
 }
-static MyTimeAndrey TimeSinceMidnightIntToMyTime(int t)
+public static MyTimeAndrey TimeSinceMidnightIntToMyTime(int t)
 {
     int seconds = t % 60;
     t = (t - seconds) / 60;
@@ -16,22 +16,22 @@ static MyTimeAndrey TimeSinceMidnightIntToMyTime(int t)
     return new MyTimeAndrey(t, minutes, seconds);
 }
 
-static MyTimeAndrey AddOneSecond(MyTimeAndrey t)
+public static MyTimeAndrey AddOneSecond(MyTimeAndrey t)
 {
     return new MyTimeAndrey(t.Hour, t.Minute, t.Second + 1);
 }
 
-static MyTimeAndrey AddOneMinute(MyTimeAndrey t)
+public static MyTimeAndrey AddOneMinute(MyTimeAndrey t)
 {
     return new MyTimeAndrey(t.Hour, t.Minute + 1, t.Second);
 }
 
-static MyTimeAndrey AddOneHour(MyTimeAndrey t)
+public static MyTimeAndrey AddOneHour(MyTimeAndrey t)
 {
     return new MyTimeAndrey(t.Hour + 1, t.Minute, t.Second );
 }
 
-static MyTimeAndrey AddSeconds(MyTimeAndrey t, int s)
+public static MyTimeAndrey AddSeconds(MyTimeAndrey t, int s)
 {
     if (s >= 0)
     {
@@ -41,7 +41,7 @@ static MyTimeAndrey AddSeconds(MyTimeAndrey t, int s)
     return TimeSinceMidnightIntToMyTime(TimeSinceMidnight(t) + s);
 }
 
-static int Difference(MyTimeAndrey t1, MyTimeAndrey t2)
+public static int Difference(MyTimeAndrey t1, MyTimeAndrey t2)
 {
     MyTimeAndrey mt = t1 - t2;
     Console.WriteLine(mt);
@@ -54,7 +54,7 @@ static int Difference(MyTimeAndrey t1, MyTimeAndrey t2)
     return TimeSinceMidnight(mt);
 }
 
-static string WhatLesson(MyTimeAndrey t)
+public static string WhatLesson(MyTimeAndrey t)
 {
     int tIndSec = TimeSinceMidnight(t);
     if (tIndSec < TimeSinceMidnight(new MyTimeAndrey(8, 0, 0)))
@@ -133,7 +133,7 @@ static string WhatLesson(MyTimeAndrey t)
 #endregion
 
 #region SecondBlock
-static List<Student> GetDataList()
+public static List<Student> GetDataList()
 {
     List<Student> dataList = new List<Student>();
     using (StreamReader sr = File.OpenText("input.txt"))
@@ -148,7 +148,7 @@ static List<Student> GetDataList()
     return dataList;
 }
 
-static void GetStudentsYounger16(List<Student> list)
+public static void GetStudentsYounger16(List<Student> list)
 {
     List<Student> resultList = new List<Student>();
     foreach (var st in list)
