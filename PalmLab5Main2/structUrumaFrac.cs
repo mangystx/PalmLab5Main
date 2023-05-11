@@ -1,4 +1,4 @@
-﻿namespace PalmLab5;
+﻿namespace PalmLab5
 {
     
     struct UrumaFrac
