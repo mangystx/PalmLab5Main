@@ -1,5 +1,5 @@
 
-namespace Palm_Laba_5
+namespace PalmLab5
 {
     public class Time
     {

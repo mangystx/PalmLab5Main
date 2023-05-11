@@ -1,4 +1,4 @@
-using Palm_Laba_5;
+using PalmLab5;
 using System;
 using System.IO;
 using System.Text;

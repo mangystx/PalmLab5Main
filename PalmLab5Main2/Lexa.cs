@@ -1,6 +1,6 @@
-using static Palm_Laba_5.Time;
+using static PalmLab5.Time;
 
-namespace Palm_Laba_5
+namespace PalmLab5
 {
     public class Lexa
     {
