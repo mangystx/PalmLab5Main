@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace PalmLab5;
+namespace PalmLab5
 {
     
     internal class JujikaNoRokuin
