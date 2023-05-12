@@ -93,8 +93,12 @@ while (true)
             switch (Console.ReadLine())
             {
                 case "1":
+                    Lexa lexa = new Lexa();
+                    lexa.SetStartTime();
                     break;
                 case "2":
+                    StudLexa studLexa = new StudLexa();
+                    studLexa.StartBlock();
                     break;
                 default:
                     Console.WriteLine("Некоректне значення");

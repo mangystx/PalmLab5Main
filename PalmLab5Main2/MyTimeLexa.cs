@@ -14,6 +14,11 @@ namespace PalmLab5
                 get { return hour; }
                 set
                 {
+                    if (value < 0)
+                    {
+                        value = Math.Abs(value);
+                        value = value > 24 ? value % 24 : 24 - value;
+                    }
                     if (value >= 24)
                     {
                         value %= 24;
@@ -26,6 +31,13 @@ namespace PalmLab5
                 get { return minute; }
                 set
                 {
+                    if (value < 0)
+                    {
+                        value = Math.Abs(value);
+                        int diffMin = value / 60;
+                        Hour -= diffMin == 0 ? diffMin + 1 : diffMin;
+                        value = value > 60 ? value % 60 : 60 - value;
+                    }
                     if (value >= 60)
                     {
                         Hour += value / 60;
@@ -39,6 +51,13 @@ namespace PalmLab5
                 get { return second; }
                 set
                 {
+                    if (value < 0)
+                    {                        
+                        value = Math.Abs(value);
+                        int diffMin = value / 60;
+                        Minute -= diffMin == 0 ? diffMin + 1 : diffMin;
+                        value = value > 60 ? value % 60 : 60 - value;
+                    }
                     if (value >= 60)
                     {
                         Minute += value / 60;
@@ -46,13 +65,6 @@ namespace PalmLab5
                     }
                     second = value;
                 }
-            }
-            public void Print()
-            {
-                Console.WriteLine("Коректний час");
-                string[] tempTime = { hour.ToString("D2"), minute.ToString("D2"), second.ToString("D2")};
-                string time = String.Join(":",tempTime);
-                Console.WriteLine($"{time}");
             }
             public MyTimeLexa(int h, int m, int s)
             {
@@ -62,7 +74,7 @@ namespace PalmLab5
             }
             public override string ToString()
             {
-                return $"MyTime: Hour={Hour}, Minute={Minute:D2}, Second={Second:D2}";
+                return $"{Hour:D2}:{Minute:D2}:{Second:D2}";
             }
         };
     }
