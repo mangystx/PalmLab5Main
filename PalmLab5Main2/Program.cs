@@ -69,6 +69,7 @@ while (true)
 
                     break;
                 case "2":
+                    Andrey.GetStudentsYounger16(Andrey.GetDataList());
                     break;
                 default:
                     Console.WriteLine("Некоректне значення");
