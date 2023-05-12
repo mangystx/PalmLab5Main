@@ -13,51 +13,50 @@ namespace PalmLab5
         static MyTimeLexa TimeSinceMidnight()
         {
             int t = int.Parse(Console.ReadLine());
-            MyTimeLexa stud = new MyTimeLexa();
-            stud.Second = t;
-            stud.Print();
+            MyTimeLexa stud = new MyTimeLexa(0,0,t);
+            Console.WriteLine(stud);
             return stud;
         }
         static MyTimeLexa AddOneSecond(MyTimeLexa t)
         {
             t.Second += 1;
-            t.Print();
+            Console.WriteLine(t);
             return t;
         }
         static MyTimeLexa AddOneMinute(MyTimeLexa t)
         {
             t.Minute += 1;
-            t.Print();
+            Console.WriteLine(t);
             return t;
         }
         static MyTimeLexa AddOneHour(MyTimeLexa t)
         {
             t.Hour += 1;
-            t.Print();
+            Console.WriteLine(t);
             return t;
         }
         static MyTimeLexa AddSeconds(MyTimeLexa t)
         {
             int s = int.Parse(Console.ReadLine());
             t.Second += s;
-            t.Print();
+            Console.WriteLine(t);
             return t;
         }
-        static void Difference(MyTimeLexa[] MyTimeLexas)
+        static void Difference(MyTimeLexa[] mt)
         {
-            double[] resTimeOfMT = new double[MyTimeLexas.Length * 3];
-            for (int i = 0; i < MyTimeLexas.Length; i++)
+            double[] resTimeOfMT = new double[mt.Length * 3];
+            for (int i = 0; i < mt.Length; i++)
             {
                 Console.WriteLine($"Введіть {i + 1} час");
                 int[] time = Array.ConvertAll(Console.ReadLine().Trim().Split(':', '.', ','), int.Parse);
-                MyTimeLexas[i].Hour = time[0];
-                MyTimeLexas[i].Minute = time[1];
-                MyTimeLexas[i].Second = time[2];
-                resTimeOfMT[i * 3] = MyTimeLexas[i].Hour + Convert.ToDouble(MyTimeLexas[i].Minute) / 60 + Convert.ToDouble(MyTimeLexas[i].Second) / 120;
-                resTimeOfMT[i * 3 + 1] = MyTimeLexas[i].Hour * 60 + MyTimeLexas[i].Minute + Convert.ToDouble(MyTimeLexas[i].Second) / 60;
-                resTimeOfMT[i * 3 + 2] = MyTimeLexas[i].Hour * 60 * 60 + MyTimeLexas[i].Minute * 60 + MyTimeLexas[i].Second;
+                mt[i].Hour = time[0];
+                mt[i].Minute = time[1];
+                mt[i].Second = time[2];
+                resTimeOfMT[i * 3] = mt[i].Hour + Convert.ToDouble(mt[i].Minute) / 60 + Convert.ToDouble(mt[i].Second) / 120;
+                resTimeOfMT[i * 3 + 1] = mt[i].Hour * 60 + mt[i].Minute + Convert.ToDouble(mt[i].Second) / 60;
+                resTimeOfMT[i * 3 + 2] = mt[i].Hour * 60 * 60 + mt[i].Minute * 60 + mt[i].Second;
             }
-            for (int i = 0; i < MyTimeLexas.Length; i += 2)
+            for (int i = 0; i < mt.Length; i += 2)
             {
                 double resDiffInHour = resTimeOfMT[i * 3] - resTimeOfMT[i * 3 + 3];
                 Console.WriteLine($"Різниця часу в годинах {resDiffInHour}");
@@ -137,7 +136,7 @@ namespace PalmLab5
             string select;
             do
             {
-                Console.WriteLine("Введіть бажаний варіант\t\t Для часу введіть t\n" +
+                Console.WriteLine("Введіть бажаний варіант\t\t Для часу введіть t\\time\\9\n" +
                     "1) Перетворюватиме вказаний час у кількість секунд, що пройшли від початку доби\n" +
                     "2) Перетворюватиме кількість секунд, що пройшли від початку доби\n" +
                     "3) Додаватиме до структури одну секунду\n" +
@@ -150,6 +149,10 @@ namespace PalmLab5
                 switch (select)
                 {
                     case "t":
+                    case "time":
+                    case "н":
+                    case "y":
+                    case "9":
                         SetStartTime();
                         break;
                     case "1":
@@ -171,13 +174,7 @@ namespace PalmLab5
                         t = AddSeconds(t);
                         break;
                     case "7":
-                        Console.WriteLine("Введіть кількість моментів часу");
-                        MyTimeLexa[] MyTimeLexas = new MyTimeLexa[int.Parse(Console.ReadLine())];
-                        if (MyTimeLexas.Length % 2 != 0)
-                        {
-                            Console.WriteLine("Кількість введеного часу була не парна тому буде кількість збільшена на 1");
-                            MyTimeLexas = new MyTimeLexa[MyTimeLexas.Length + 1];
-                        }
+                        MyTimeLexa[] MyTimeLexas = new MyTimeLexa[2];
                         Difference(MyTimeLexas);
                         break;
                     case "8":
@@ -194,7 +191,7 @@ namespace PalmLab5
             Console.WriteLine("Введіть ваш час");
             int[] time = Array.ConvertAll(Console.ReadLine().Trim().Split(':', '.', ',', ' '), int.Parse);
             MyTimeLexa t = new MyTimeLexa(time[0], time[1], time[2]);
-            t.Print();
+            Console.WriteLine(t);
             WorkWithTime(t);
         }
     }
