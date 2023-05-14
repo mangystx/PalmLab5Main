@@ -1,7 +1,7 @@
-﻿namespace PalmLab5
+namespace PalmLab5
 {
-    
-    struct UrumaFrac
+
+    public struct UrumaFrac
     {
         public long Numerator, Denominator;
         public UrumaFrac(long Numerator_, long Denominator_)
@@ -24,9 +24,9 @@
             Numerator /= a;
             Denominator /= a;
         }
-    
+
         public override string ToString() => Denominator != 1 ? $"{Numerator}/{Denominator}" : $"{Numerator}";
-    
+
         /*
         public override string ToString()
         {
