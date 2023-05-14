@@ -51,8 +51,10 @@ while (true)
             switch (Console.ReadLine())
             {
                 case "1":
+                    JujikaNoRokuin.Uruma();
                     break;
                 case "2":
+                    NTR.Ntr();
                     break;
                 default:
                     Console.WriteLine("Некоректне значення");
