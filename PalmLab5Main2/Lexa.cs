@@ -1,4 +1,3 @@
-using static PalmLab5.Time;
 
 namespace PalmLab5
 {
