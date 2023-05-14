@@ -82,7 +82,9 @@ namespace PalmLab5
             Console.WriteLine($"Результат віднімання двох дробів:{Minus(res1, res2)}");
             Console.WriteLine($"Результат множення двох дробів: {Multiply(res1, res2)}");
             Console.WriteLine($"Результат ділення двох дробів: {Divide(res1, res2)}");
+            Console.WriteLine("Введіть n для виконання CalcSum1:");
             Console.WriteLine($"{CalcSum1(int.Parse(Console.ReadLine()))}");
+            Console.WriteLine("Введіть n для виконання CalcSum2:");
             Console.WriteLine($"{CalcSum2(int.Parse(Console.ReadLine()))}");
         }
     }

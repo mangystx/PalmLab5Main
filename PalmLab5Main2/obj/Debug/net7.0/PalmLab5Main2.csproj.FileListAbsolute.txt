@@ -1,0 +1,15 @@
+C:\Users\shafi\Source\Repos\PalmLab5Main\PalmLab5Main2\obj\Debug\net7.0\PalmLab5Main2.csproj.AssemblyReference.cache
+C:\Users\shafi\Source\Repos\PalmLab5Main\PalmLab5Main2\obj\Debug\net7.0\PalmLab5Main2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\shafi\Source\Repos\PalmLab5Main\PalmLab5Main2\obj\Debug\net7.0\PalmLab5Main2.AssemblyInfoInputs.cache
+C:\Users\shafi\Source\Repos\PalmLab5Main\PalmLab5Main2\obj\Debug\net7.0\PalmLab5Main2.AssemblyInfo.cs
+C:\Users\shafi\Source\Repos\PalmLab5Main\PalmLab5Main2\obj\Debug\net7.0\PalmLab5Main2.csproj.CoreCompileInputs.cache
+C:\Users\shafi\Source\Repos\PalmLab5Main\PalmLab5Main2\bin\Debug\net7.0\PalmLab5Main2.exe
+C:\Users\shafi\Source\Repos\PalmLab5Main\PalmLab5Main2\bin\Debug\net7.0\PalmLab5Main2.deps.json
+C:\Users\shafi\Source\Repos\PalmLab5Main\PalmLab5Main2\bin\Debug\net7.0\PalmLab5Main2.runtimeconfig.json
+C:\Users\shafi\Source\Repos\PalmLab5Main\PalmLab5Main2\bin\Debug\net7.0\PalmLab5Main2.dll
+C:\Users\shafi\Source\Repos\PalmLab5Main\PalmLab5Main2\bin\Debug\net7.0\PalmLab5Main2.pdb
+C:\Users\shafi\Source\Repos\PalmLab5Main\PalmLab5Main2\obj\Debug\net7.0\PalmLab5Main2.dll
+C:\Users\shafi\Source\Repos\PalmLab5Main\PalmLab5Main2\obj\Debug\net7.0\refint\PalmLab5Main2.dll
+C:\Users\shafi\Source\Repos\PalmLab5Main\PalmLab5Main2\obj\Debug\net7.0\PalmLab5Main2.pdb
+C:\Users\shafi\Source\Repos\PalmLab5Main\PalmLab5Main2\obj\Debug\net7.0\PalmLab5Main2.genruntimeconfig.cache
+C:\Users\shafi\Source\Repos\PalmLab5Main\PalmLab5Main2\obj\Debug\net7.0\ref\PalmLab5Main2.dll
