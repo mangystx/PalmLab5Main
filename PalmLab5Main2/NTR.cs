@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using System.IO;
 
 namespace PalmLab5
 {
-    public class NTR
+    internal class NTR
     {
-        public void Ntr()
+        public static void Ntr()
         {
             try
             {
