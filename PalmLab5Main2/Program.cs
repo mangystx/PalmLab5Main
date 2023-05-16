@@ -81,8 +81,12 @@ while (true)
             switch (Console.ReadLine())
             {
                 case "1":
+                    Ivan_MainFrac ivan = Ivan_MainFrac();
+                    ivan.Main();
                     break;
                 case "2":
+                    Ivan_Stud ivan = Ivan_Stud();
+                    ivan.Main();
                     break;
                 default:
                     Console.WriteLine("Некоректне значення");
