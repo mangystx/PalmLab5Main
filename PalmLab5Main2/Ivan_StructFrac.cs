@@ -1,6 +1,6 @@
 ﻿namespace PalmLab5
 {
-    struct MyFrac
+    public struct MyFrac
     {
         public long nom, denom;
         public MyFrac(long nom_, long denom_)
