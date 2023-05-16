@@ -4,7 +4,7 @@ using System.Threading.Channels;
 
 namespace PalmLab5
 {
-    class Ivan_MainFrac
+    public class Ivan_MainFrac
     {
         public static void Main()
         {
