@@ -1,6 +1,6 @@
 ﻿namespace PalmLab5
 {
-    class Program
+    public class Ivan_Stud
     {
         public static void Main() 
         {
