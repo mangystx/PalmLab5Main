@@ -62,6 +62,10 @@ namespace PalmLab5
                 {
                     return mark_;
                 }
+                else
+                {
+                    return '2';
+                }
 
                 throw new Exception($"Invalid mark: {mark}");
             }

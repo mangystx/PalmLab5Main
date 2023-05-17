@@ -70,7 +70,7 @@ namespace PalmLab5
             }
             return first;
         }
-        public static void Uruma(string[] args)
+        public static void Uruma()
         {
             Console.WriteLine("Введіть чисельник та знаменник першого дробу через пробіл:");
             string[] input1 = Console.ReadLine().Split();
@@ -82,7 +82,9 @@ namespace PalmLab5
             Console.WriteLine($"Результат віднімання двох дробів:{Minus(res1, res2)}");
             Console.WriteLine($"Результат множення двох дробів: {Multiply(res1, res2)}");
             Console.WriteLine($"Результат ділення двох дробів: {Divide(res1, res2)}");
-            Console.WriteLine($"{CalcSum1(int.Parse(Console.ReadLine()))}");
+            Console.WriteLine("Введіть n для CalcSum1:");
+            Console.WriteLine($"{CalcSum1(int.Parse(Console.ReadLine()))}");            
+            Console.WriteLine("Введіть n для CalcSum2:");
             Console.WriteLine($"{CalcSum2(int.Parse(Console.ReadLine()))}");
         }
     }

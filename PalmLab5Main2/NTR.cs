@@ -5,7 +5,7 @@ namespace PalmLab5
 {
     public class NTR
     {
-        public void Ntr()
+        public static void Ntr()
         {
             try
             {
