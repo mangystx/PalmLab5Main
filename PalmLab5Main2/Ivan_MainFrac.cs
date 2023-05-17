@@ -24,8 +24,6 @@ namespace PalmLab5
             Console.WriteLine($"Дрiб Divide рiвний {Divide(strukt_1, strukt_2)}");
             Console.WriteLine($"Значення виразу з коду рiвне {CalcSum1()}");
             Console.WriteLine($"Значення виразу з коду рiвне {CalcSum2()}");
-
-            Console.ReadLine();
         }
         static void Out_MyFrac(out MyFrac strukt)
         {
