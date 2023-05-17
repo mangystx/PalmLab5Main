@@ -2,25 +2,26 @@
 {
     public class Ivan_Stud
     {
-        public void Main() 
+        public void Main()
         {
-            string str = ReadFile();
-            Student stud = new Student(str);
-            PrintSurnames(stud);
+            string input;
+            using (StreamReader stream = File.OpenText("input.txt"))
+            {
+                bool yes = true;
+                while ((input = stream.ReadLine()) != null)
+                {
+                    Student stud = new Student(input);
+                    PrintSurnames(stud, ref yes);
+                }
+                if (yes) Console.WriteLine($"Таких студентiв немає");
+            }
         }
-        static string ReadFile()
-        {
-            return File.ReadAllText("input.txt");
-        }
-        static void PrintSurnames(Student stud)
+        static void PrintSurnames(Student stud, ref bool yes)
         {
             if (stud.mathematicsMark >= 3 & stud.physicsMark >= 3 & stud.informaticsMark >= 3 & stud.scholarship == 0)
             {
                 Console.WriteLine($"{stud.surName} - цей студент підходить");
-            }
-            else
-            {
-                Console.WriteLine("Таких студентiв немає");
+                yes = false;
             }
         }
     }
